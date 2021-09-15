@@ -18,7 +18,7 @@ replace email and password details from dataforseo
 Open [http://localhost:8080/?url=https://www.cnn.com](http://localhost:8080/?url=https://www.cnn.com)
 
 ## Common Issues
-Status Code 401 - You did not setup .env properlly and update with your email/password from dataforseo
+Status Code 401 - You did not setup .env properly and update with your email/password from dataforseo
 
 
 ## Questions/Comments/Help
