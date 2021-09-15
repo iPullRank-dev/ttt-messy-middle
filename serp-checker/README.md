@@ -1,6 +1,6 @@
 # SERP Checker
 
-Fetch SERP from dataforseo
+Fetch SERP from Data for SEO
 
 ## Setup
 Signup for [dataforseo.com](https://dataforseo.com/)
