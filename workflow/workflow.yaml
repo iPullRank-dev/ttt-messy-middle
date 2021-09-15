@@ -1,0 +1,49 @@
+main:
+    params: [input]
+    steps:
+    - fetchSERP:
+        call: http.get
+        args:
+            url: REPLACE_WITH_SERP_CHECKER_ENDPOINT
+            query:
+                keyword: ${input.keyword}
+                domain: ${input.domain}
+        result: serpResults
+    - setFromCallResult:
+        assign:
+            - ranks: ${serpResults.body.ranks}
+            - i: 0
+    - logRank:
+        call: sys.log
+        args:
+            text: ${ranks}
+            severity: "INFO" 
+    - loopStep:
+        for:
+            value: rank
+            in: ${ranks}
+            steps:
+            - fetchPageTitle:
+                call: http.get
+                args:
+                    url: REPLACE_WITH_LINK_CHECKER_ENDPOINT
+                    query:
+                        url: ${rank.url}
+                result: pageData
+            - capture:
+                assign:
+                    - ranks[i]["match"]: false
+                    - ranks[i]["pageTitle"]: ${pageData.body.title}
+                    - ranks[i]["pageDescription"]: ${pageData.body.description}
+            - checkAgainst:
+                switch:
+                - condition: ${ranks[i]["serpTitle"]==pageData.body.title}
+                  steps:
+                    - stepA:
+                        assign:
+                            - ranks[i]["match"]: true
+            - increment:
+                assign:
+                    - i: ${i+1}
+            - fin:
+                return: ${ranks}

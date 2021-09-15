@@ -1,0 +1,17 @@
+{
+  "name": "page-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx functions-framework --target=pageChecker"
+  },
+  "author": "iPullRank",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^1.9.0",
+    "puppeteer": "^10.2.0",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.8"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "serp-checker",
+  "version": "1.0.0",
+  "description": "fetch SERP from dataforseo",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx functions-framework --target=serpChecker"
+  },
+  "author": "iPullRank",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^1.9.0",
+    "axios": "^0.21.4",
+    "dotenv": "^10.0.0"
+  }
+}
