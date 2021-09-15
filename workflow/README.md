@@ -1,6 +1,6 @@
 ## Google Workflow
 
-Be sure to signup at (Google Workflows)[https://cloud.google.com/workflows] as you can just copy/paste the workflow.yaml details into the tool.
+Be sure to signup at [Google Workflows](https://cloud.google.com/workflows) as you can just copy/paste the workflow.yaml details into the tool.
 
 You will need to setup 2 cloudflare functions
 * SERP Checker - Fetch Google SERP by Keyword and filter rankings by domain
