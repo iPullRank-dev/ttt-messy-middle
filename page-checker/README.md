@@ -5,7 +5,7 @@ Fetch Page Title and Meta Description
 This code is for a Google Cloud Function and requires passing in a url as a query param, e.g. ?url=https://ipullrank.com
 
 ## Google Cloudfunction Setup
-Be sure to signup for [https://cloud.google.com/functions/docs/quickstart-nodejs](Google Cloud) and setup authentication
+Be sure to signup for [Google Cloud](https://cloud.google.com/functions/docs/quickstart-nodejs) and setup authentication
 
 ## Setup
 ``` npm install```
